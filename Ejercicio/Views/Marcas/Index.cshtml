@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Ejercicio.Data.Entities.Marca>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-action="Create"><i class="btn btn-primary">Nuevo</i></a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class=" btn btn-info">Editar</i></a> 
+                <a asp-action="Details" asp-route-id="@item.Id"><i class=" btn btn-warning">Detalles</i></a> 
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class=" btn btn-danger">Eliminar</i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

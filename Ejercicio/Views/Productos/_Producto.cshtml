@@ -1,0 +1,53 @@
+﻿@model Ejercicio.Models.ProductViewModel
+
+
+<div class="form-group">
+    <label asp-for="Codigo" class="control-label"></label>
+    <input asp-for="Codigo" class="form-control" />
+    <span asp-validation-for="Codigo" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Descripcion" class="control-label"></label>
+    <input asp-for="Descripcion" class="form-control" />
+    <span asp-validation-for="Descripcion" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Precio" class="control-label"></label>
+    <input asp-for="Precio" class="form-control" />
+    <span asp-validation-for="Precio" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Stock" class="control-label"></label>
+    <input asp-for="Stock" class="form-control" />
+    <span asp-validation-for="Stock" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="IVA" class="control-label"></label>
+    <input asp-for="IVA" class="form-control" />
+    <span asp-validation-for="IVA" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Peso" class="control-label"></label>
+    <input asp-for="Peso" class="form-control" />
+    <span asp-validation-for="Peso" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ZonaId" class="control-label"></label>
+    <select asp-for="ZonaId" asp-items="Model.Zonas" class="form-control"></select>
+    <span asp-validation-for="ZonaId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="MarcaId" class="control-label"></label>
+    <select asp-for="MarcaId" asp-items="Model.Marcas" class="form-control"></select>
+    <span asp-validation-for="MarcaId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PresentacionId" class="control-label"></label>
+    <select asp-for="PresentacionId" asp-items="Model.Presentaciones" class="form-control"></select>
+    <span asp-validation-for="PresentacionId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ProveedorId" class="control-label"></label>
+    <select asp-for="ProveedorId" asp-items="Model.Proveedores" class="form-control"></select>
+    <span asp-validation-for="ProveedorId" class="text-danger"></span>
+</div>

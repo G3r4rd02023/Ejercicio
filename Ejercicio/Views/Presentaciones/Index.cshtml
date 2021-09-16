@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Ejercicio.Data.Entities.Presentacion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-action="Create">Crear Nuevo</a>
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class=" btn btn-info"></i>Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.Id"><i class=" btn btn-warning"></i>Detalles</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class=" btn btn-danger"></i>Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

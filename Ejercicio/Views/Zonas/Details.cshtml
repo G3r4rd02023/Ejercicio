@@ -1,0 +1,24 @@
+﻿@model Ejercicio.Data.Entities.Zona
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Detalles</h4>
+
+<div>
+    <h4>Zona</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id"><i class=" btn btn-info"></i>Editar</a> 
+    <a asp-action="Index"><i class=" btn btn-success"></i>Cancelar</a>
+</div>
